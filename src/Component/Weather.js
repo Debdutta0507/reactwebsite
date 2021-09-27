@@ -47,15 +47,15 @@ export default function Weather() {
                     </thead>
                     <tbody>
                        
-                            {repo.map((repos) => (
-                               <> <tr>
+                            {repo.map((repos, i) => (
+                               <tr key={i}>
                              <td>{repos.timepoint}</td>
                                 <td>{repos.cloudcover}</td>
                                 <td>{repos.prec_type}</td>
                                 <td>{repos.temp2m}</td>
                                 <td>{repos.wind10m.speed}</td>
                                 <td>{repos.wind10m.direction}</td>
-                                </tr></>
+                                </tr>
                             ))
                             }
 
