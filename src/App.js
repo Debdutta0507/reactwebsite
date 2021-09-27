@@ -12,6 +12,7 @@ import Alert from './Component/Alert';
   
 } from "react-router-dom"; 
 import Weather from './Component/Weather';
+import Weatherstyle from './Component/Weatherstyle';
 
 
 
@@ -70,7 +71,7 @@ function App() {
               <About mode={mode} />
             </Route> 
             <Route exact path="/weather">
-              <Weather  />
+              <Weather/>
             </Route> 
 
 
