@@ -2,15 +2,16 @@
 import './App.css';
 import Navbar from './Component/Navbar';
 import TextBox from './Component/TextBox';
-/* import About from './Component/About'; */
+ import About from './Component/About';
 import React, { useState } from 'react'
 import Alert from './Component/Alert';
-/* import {
+ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
-} from "react-router-dom"; */
+  
+} from "react-router-dom"; 
+import Weather from './Component/Weather';
 
 
 
@@ -58,24 +59,29 @@ function App() {
 
   return (
     <>
-      {/* <Router> */}
+      <Router> 
         <Navbar title="TextUtils" aboutText='About TextUtils' mode={mode} togglemode={togglemode} brownMode={brownMode} greenMode={greenMode} />
         <Alert alert={alert} />
-
-
+       
         <div className="container">
+          <Switch>
           
-           {/*  <Route exact path="/about">
-              <About />
-            </Route> */}
+            <Route exact path="/about">
+              <About mode={mode} />
+            </Route> 
+            <Route exact path="/weather">
+              <Weather  />
+            </Route> 
 
 
-            {/* <Router exact path="/"> */}
+             <Router exact path="/"> 
               <TextBox heading="Enter text below" mode={mode} showAlert={showAlert} />
-            {/* </Router> */}
+           </Router> 
+           </Switch>
           
         </div>
-      {/* </Router> */}
+        
+     </Router> 
 
     </>
 

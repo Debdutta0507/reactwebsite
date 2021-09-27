@@ -61,44 +61,44 @@ export default function TextBox(props) {
                             switch (props.mode) {
                                 case "#401b1b": return '#6d380b';
                                 case 'light': return 'white';
-                                case "dark": return "grey";
+                                case "dark": return "#082146";
                                 default: return "#FFFFFF";
                             }
                         })()
                     }} id="myBox" rows="8"></textarea>
                 </div>
-                <button className={`btn btn-${(() => {
+                <button disabled={text.length===0}className={`btn btn-${(() => {
         switch (props.mode) {
           case "#401b1b":return 'secondary';
           case 'light': return 'primary';
           case "dark":  return "primary";
           default:      return "#FFFFFF";
         }
-      })()} mx-2`} on onClick={handleUpClick}>Convert to uppercase</button>
-                <button className={`btn btn-${(() => {
+      })()} mx-2 my-2`} on onClick={handleUpClick}>Convert to uppercase</button>
+                <button disabled={text.length===0} className={`btn btn-${(() => {
         switch (props.mode) {
           case "#401b1b":return 'secondary';
           case 'light': return 'primary';
           case "dark":  return "primary";
           default:      return "#FFFFFF";
         }
-      })()} mx-2`} on onClick={handleLowClick}>Convert to Lowercase</button>
-                <button className={`btn btn-${(() => {
+      })()} mx-2 my-1`} on onClick={handleLowClick}>Convert to Lowercase</button>
+                <button disabled={text.length===0} className={`btn btn-${(() => {
         switch (props.mode) {
           case "#401b1b":return 'secondary';
           case 'light': return 'primary';
           case "dark":  return "primary";
           default:      return "#FFFFFF";
         }
-      })()} mx-2`} on onClick={handleClearClick}>Clear Text</button>
-                <button className={`btn btn-${(() => {
+      })()} mx-2 my-1`} on onClick={handleClearClick}>Clear Text</button>
+                <button disabled={text.length===0} className={`btn btn-${(() => {
         switch (props.mode) {
           case "#401b1b":return 'secondary';
           case 'light': return 'primary';
           case "dark":  return "primary";
           default:      return "#FFFFFF";
         }
-      })()} mx-2`}
+      })()} mx-2 my-1`}
 
                     on onClick={removeSpaces}>Remove spaces</button>
             </div>
